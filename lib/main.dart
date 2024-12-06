@@ -47,7 +47,7 @@ class LoginPage extends StatelessWidget {
               ),
               const SizedBox(height: 30),
               TextFormField(
-                obscureText: true, // Для показа звездочек при вводе пароля
+                obscureText: true,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: 'Введите пароль',
@@ -63,7 +63,6 @@ class LoginPage extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   if (formKey.currentState?.validate() ?? false) {
-                    // Если форма валидна, переходим на новый экран
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const HomePage()),
